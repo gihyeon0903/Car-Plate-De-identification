@@ -38,13 +38,28 @@ We make natural car plate using De-Identification technique in three steps below
 <br>
 
 > #### i. Generate artificial plate
-> - Define Position of {Digit(숫자), Word(문자), Region(지역)} in plate (fig.i-1)<br>
-> - Randomly generates characters that may appear depending on the type of license plate<br>
-> - Sampling image matching Generated characters from DataBase(fig.i-2)<br>
-> - Attach image to car plat frame(fig.i-3)
+> - Define Position of {Digit(숫자), Word(문자), Region(지역)} in plate.<br>
+> - Randomly generates characters that may appear depending on the type of license plate.<br>
+> - Sampling image matching Generated characters from DataBase.<br>
+> - Attach image to car plat frame
 <p align="center">
   <img src="./results/de identification1.png" width="300" height="110"/>
   <img src="./results/de identification2.png" width="300" height="80"/>
   <img src="./results/de identification3.png" width="270" height="150"/>
 </p>
+<!-- <p align="center">
+  <img src="./results/de identification4.png" width="750" height="600"/>
+</p> -->
 
+> #### ii. Transfer style of original plate to artificial plate
+> - We use 3-models for style transfer (Style Transfer, Pix2Pix, Style Swap)
+> - We evaluate the 3-models using PSNR and SSIM metrics.
+<p align="center">
+<img src="./results/transfer1.png" width="630" height="270"/>
+</p>
+
+> #### iii. Synthesize plate(excepted Pix2Pix model)
+> - We synthesize original image and generated car plate image using inverse perpective transfrom and seamless clone filter
+<p align="center">
+<img src="./results/synthetic1.png" width="630" height="270"/>
+</p>
