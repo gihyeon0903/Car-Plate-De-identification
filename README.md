@@ -70,8 +70,8 @@ We make natural car plate using De-Identification technique in three steps below
 <img src="./results/synthetic1.png" width="630" height="270"/>
 </p>
 <br>
---------------
 
+--------------
 ### Result
 <p align="center">
 <img src="./results/result.png" width="630" height="350"/>
