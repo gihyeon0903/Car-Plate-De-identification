@@ -9,7 +9,14 @@
 - opencv-python 4.8+
 - pytorch 2.0+
 --------------
+~~~
+import os
 
+os.makedirs(data/model_weights)
+cd data/model_weights
+~~~
+<a href="https://drive.google.com/drive/folders/1mbzC1hsGuE-jEdX0ImvXI4tSeNb3Il36?usp=drive_link">download model weights</a>
+  
 ### Method
 #### 1. Plate Detection
 We detect car plate using yolov5.<br>
@@ -47,9 +54,7 @@ We make natural car plate using De-Identification technique in three steps below
   <img src="./results/de identification2.png" width="300" height="80"/>
   <img src="./results/de identification3.png" width="270" height="150"/>
 </p>
-<!-- <p align="center">
-  <img src="./results/de identification4.png" width="750" height="600"/>
-</p> -->
+<br>
 
 > #### ii. Transfer style of original plate to artificial plate
 > - We use 3-models for style transfer (Style Transfer, Pix2Pix, Style Swap)
@@ -57,9 +62,18 @@ We make natural car plate using De-Identification technique in three steps below
 <p align="center">
 <img src="./results/transfer1.png" width="630" height="270"/>
 </p>
+<br>
 
 > #### iii. Synthesize plate(excepted Pix2Pix model)
 > - We synthesize original image and generated car plate image using inverse perpective transfrom and seamless clone filter
 <p align="center">
 <img src="./results/synthetic1.png" width="630" height="270"/>
 </p>
+<br>
+--------------
+
+### Result
+<p align="center">
+<img src="./results/result.png" width="630" height="350"/>
+</p>
+
